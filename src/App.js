@@ -10,8 +10,8 @@ const App = () => {
   return (
     <div className="App">
       <Router>
+        <GlobalStyles />
         <Layout>
-          <GlobalStyles />
           <Switch>
             <Route
               path="/timezone/:timezone/:country?/:city?"

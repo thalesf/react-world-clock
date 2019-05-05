@@ -2,6 +2,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { getTimeZone } from "../models/timezone";
+import ClockWrapper from "./style";
+import Container from "../components/shared";
 
 class Clock extends Component {
   state = {
@@ -88,22 +90,44 @@ class Clock extends Component {
       weekNumber
     } = this.state;
     return (
-      <div>
-        <h2>TimeZone Details</h2>
-        <div>
-          <h2>Abbreviation: {abbreviation}</h2>
-          <h2>DateTime: {datetime}</h2>
-          <h2>Day of Week: {dayOfWeek}</h2>
-          <h2>Day of Year: {dayOfYear}</h2>
-          <h2>DST: {dst}</h2>
-          <h2>DST From: {dstFrom}</h2>
-          <h2>DST Until: {dstUntil}</h2>
-          <h2>Timezone: {timezone}</h2>
-          <h2>UnixTime {unixtime}</h2>
-          <h2>UTC Offset {utcOffset}</h2>
-          <h2>Week Number {weekNumber}</h2>
-        </div>
-      </div>
+      <ClockWrapper>
+        <Container>
+          <h1 style={{ textAlign: "center" }}>TimeZone Details</h1>
+          <p>
+            Abbreviation: <strong>{abbreviation}</strong>
+          </p>
+          <p>
+            DateTime: <strong>{datetime}</strong>
+          </p>
+          <p>
+            Day of Week: <strong>{dayOfWeek}</strong>
+          </p>
+          <p>
+            Day of Year: <strong>{dayOfYear}</strong>
+          </p>
+          <p>
+            DST: <strong>{dst}</strong>
+          </p>
+          <p>
+            DST From: <strong>{dstFrom}</strong>
+          </p>
+          <p>
+            DST Until: <strong>{dstUntil}</strong>
+          </p>
+          <p>
+            Timezone: <strong>{timezone}</strong>
+          </p>
+          <p>
+            UnixTime <strong>{unixtime}</strong>
+          </p>
+          <p>
+            UTC Offset <strong>{utcOffset}</strong>
+          </p>
+          <p>
+            Week Number <strong>{weekNumber}</strong>
+          </p>
+        </Container>
+      </ClockWrapper>
     );
   }
 }

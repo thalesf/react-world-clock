@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <LayoutWrapper>
       <SearchBar />
-      <main style={{ flex: 1 }}>{children}</main>
+      <main style={{ flex: 1, flexDirection: "column" }}>{children}</main>
       <Footer />
     </LayoutWrapper>
   );
