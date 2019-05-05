@@ -1,8 +1,9 @@
 import React from "react";
+import FooterWrapper from "./style";
 
 const Footer = () => {
   return (
-    <footer>
+    <FooterWrapper>
       <p>
         Made with{" "}
         <a
@@ -13,7 +14,7 @@ const Footer = () => {
           World Time API
         </a>
       </p>
-    </footer>
+    </FooterWrapper>
   );
 };
 

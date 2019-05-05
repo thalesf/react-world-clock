@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./pages/home";
 import Clock from "./pages/clock";
+import GlobalStyles from "./components/shared/GlobalStyles";
 
 const App = () => {
   return (
     <div className="App">
       <Router>
+        <GlobalStyles />
         <Home />
         <Switch>
           <Route

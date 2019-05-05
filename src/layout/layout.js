@@ -3,14 +3,15 @@ import PropTypes from "prop-types";
 
 import SearchBar from "../components/SearchBar";
 import Footer from "../components/Footer";
+import LayoutWrapper from "./style";
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <LayoutWrapper>
       <SearchBar />
-      <div>{children}</div>
+      <main style={{ flex: 1 }}>{children}</main>
       <Footer />
-    </div>
+    </LayoutWrapper>
   );
 };
 

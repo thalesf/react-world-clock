@@ -44,7 +44,7 @@ class SearchBar extends Component {
         }) => (
           <div>
             <Input
-              placeholder="Search a city"
+              placeholder="Timezone..."
               onChange={this.handleInputChange}
               {...getInputProps()}
             />
