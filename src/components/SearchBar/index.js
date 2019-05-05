@@ -6,6 +6,7 @@ import Input from "../Input";
 
 import { getAllTimezones } from "../../models/timezone";
 import filterElement from "../../lib/filter";
+import ListWrapper from "./style";
 
 class SearchBar extends Component {
   state = {
@@ -48,7 +49,7 @@ class SearchBar extends Component {
               onChange={this.handleInputChange}
               {...getInputProps()}
             />
-            <ul {...getMenuProps(city)}>
+            <ListWrapper {...getMenuProps(city)}>
               {isOpen
                 ? filterElement(timezones, inputValue).map(item => {
                     return (
@@ -63,7 +64,7 @@ class SearchBar extends Component {
                     );
                   })
                 : null}
-            </ul>
+            </ListWrapper>
           </div>
         )}
       </Downshift>

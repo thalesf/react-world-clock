@@ -1,6 +1,15 @@
 /* eslint-disable camelcase */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { FiClock } from "react-icons/fi";
+import { FaCalendarAlt } from "react-icons/fa";
+import { GoCalendar } from "react-icons/go";
+import {
+  TiWorldOutline,
+  TiSortNumerically,
+  TiSortAlphabetically
+} from "react-icons/ti";
+
 import { getTimeZone } from "../models/timezone";
 import ClockWrapper from "./style";
 import Container from "../components/shared";
@@ -92,40 +101,99 @@ class Clock extends Component {
     return (
       <ClockWrapper>
         <Container>
-          <h1 style={{ textAlign: "center" }}>TimeZone Details</h1>
-          <p>
-            Abbreviation: <strong>{abbreviation}</strong>
-          </p>
-          <p>
-            DateTime: <strong>{datetime}</strong>
-          </p>
-          <p>
-            Day of Week: <strong>{dayOfWeek}</strong>
-          </p>
-          <p>
-            Day of Year: <strong>{dayOfYear}</strong>
-          </p>
-          <p>
-            DST: <strong>{dst}</strong>
-          </p>
-          <p>
-            DST From: <strong>{dstFrom}</strong>
-          </p>
-          <p>
-            DST Until: <strong>{dstUntil}</strong>
-          </p>
-          <p>
-            Timezone: <strong>{timezone}</strong>
-          </p>
-          <p>
-            UnixTime <strong>{unixtime}</strong>
-          </p>
-          <p>
-            UTC Offset <strong>{utcOffset}</strong>
-          </p>
-          <p>
-            Week Number <strong>{weekNumber}</strong>
-          </p>
+          <table>
+            <thead>
+              <tr>
+                <th colSpan="3">TimeZone Details</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>
+                  <TiSortAlphabetically size={30} />
+                </td>
+                <td>Abbreviation:</td>
+                <td>{abbreviation}</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <FiClock size={30} />
+                </td>
+                <td> DateTime: </td>
+                <td>{datetime}</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <FaCalendarAlt size={30} />
+                </td>
+                <td>Day of Week:</td>
+                <td>{dayOfWeek}</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <GoCalendar size={30} />
+                </td>
+                <td>Day of Year:</td>
+                <td>{dayOfYear}</td>
+              </tr>
+
+              <tr>
+                <td>DST</td>
+                <td>DST:</td>
+                <td>{dst}</td>
+              </tr>
+
+              <tr>
+                <td>From</td>
+                <td> DST From:</td>
+                <td>{dstFrom}</td>
+              </tr>
+
+              <tr>
+                <td>Until</td>
+                <td>DST Until:</td>
+                <td>{dstUntil}</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <TiWorldOutline size={32} />
+                </td>
+                <td>Timezone:</td>
+                <td>{timezone}</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/2/2e/UNIX%C2%AE.png"
+                    width="30"
+                    alt="Unix Logo"
+                  />
+                </td>
+                <td>UnixTime:</td>
+                <td>{unixtime}</td>
+              </tr>
+
+              <tr>
+                <td>Ofs</td>
+                <td>UTC Offset:</td>
+                <td>{utcOffset}</td>
+              </tr>
+
+              <tr>
+                <td>
+                  <TiSortNumerically size={30} />
+                </td>
+                <td>Week Number:</td>
+                <td>{weekNumber}</td>
+              </tr>
+            </tbody>
+          </table>
         </Container>
       </ClockWrapper>
     );

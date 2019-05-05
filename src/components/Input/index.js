@@ -1,8 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import InputField from "./style";
 
 const Input = ({ placeholder, onChange }) => {
-  return <input type="text" placeholder={placeholder} onChange={onChange} />;
+  return (
+    <InputField type="text" placeholder={placeholder} onChange={onChange} />
+  );
 };
 
 Input.propTypes = {
