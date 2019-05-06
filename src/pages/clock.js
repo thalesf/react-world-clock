@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import moment from "moment";
 import { FiClock } from "react-icons/fi";
 import { FaCalendarAlt } from "react-icons/fa";
 import { GoCalendar } from "react-icons/go";
@@ -11,7 +10,7 @@ import {
   TiSortAlphabetically
 } from "react-icons/ti";
 
-import { getTimeZone, timeIncrement } from "../models/timezone";
+import { getTimeZone } from "../models/timezone";
 import ClockWrapper from "./style";
 import Container from "../components/shared";
 
@@ -123,7 +122,7 @@ class Clock extends Component {
                   <FiClock size={30} />
                 </td>
                 <td> DateTime: </td>
-                <td>{moment(datetime).format("MMMM Do YYYY, h:mm:ss a")}</td>
+                <td>{datetime}</td>
               </tr>
 
               <tr>
