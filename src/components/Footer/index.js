@@ -5,7 +5,6 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <p>
-        Made with{" "}
         <a
           href="http://worldtimeapi.org"
           rel="noopener noreferrer"
