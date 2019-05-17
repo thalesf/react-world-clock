@@ -20,15 +20,13 @@ class SearchBar extends Component {
 
   getTimeZones = async () => {
     const timezone = await getAllTimezones();
-    console.log(timezone);
     this.setState({
       timezones: timezone
     });
   };
 
   handleInputChange = event => {
-    const { city } = this.state;
-    this.setState({ city: event.target.value }, () => console.log(city));
+    this.setState({ city: event.target.value });
   };
 
   render() {
