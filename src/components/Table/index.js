@@ -8,20 +8,22 @@ import {
   TiSortAlphabetically
 } from "react-icons/ti";
 
-const Table = zone => {
+const Table = data => {
   const {
-    abbreviation,
-    datetime,
-    dayOfWeek,
-    dayOfYear,
-    dst,
-    dstFrom,
-    dstUntil,
-    timezone,
-    unixtime,
-    utcOffset,
-    weekNumber
-  } = zone;
+    zone: {
+      abbreviation,
+      datetime,
+      dayOfWeek,
+      dayOfYear,
+      dst,
+      dstFrom,
+      dstUntil,
+      timezone,
+      unixtime,
+      utcOffset,
+      weekNumber
+    }
+  } = data;
 
   return (
     <table>
