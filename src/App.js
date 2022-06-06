@@ -11,6 +11,7 @@ const App = () => {
     <div className="App">
       <Router>
         <GlobalStyles />
+        <h1>Teste</h1>
         <Layout>
           <Switch>
             <Route
